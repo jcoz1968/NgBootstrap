@@ -11,9 +11,10 @@ import { FormsModule } from '@angular/forms';
 
 // Third party imports
 import { NgxLoadingModule } from 'ngx-loading';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule, NgbDateAdapter } from '@ng-bootstrap/ng-bootstrap';
 
 import { WorkoutsApiService } from './services/workouts-api.service';
+import { DateStringAdapterService } from './services/date-string-adapter.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { WorkoutsApiService } from './services/workouts-api.service';
     NgbModule.forRoot(),
     NgxLoadingModule.forRoot({})
   ],
-  providers: [ WorkoutsApiService ],
+  providers: [ WorkoutsApiService, {provide: NgbDateAdapter, useClass: DateStringAdapterService } ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
