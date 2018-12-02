@@ -6,4 +6,25 @@
       Welcome to my Workout Tracker!
     </p>
   </div>
+
+  <ngb-accordion type="success" activeIds="panel1,panel2">
+    <ngb-panel id="panel1">
+      <ng-template ngbPanelTitle>
+        <p class="font-weight-bold">First</p>
+      </ng-template>
+      <ng-template ngbPanelContent>First Panel</ng-template>
+    </ngb-panel>
+    <ngb-panel id="panel2">
+      <ng-template ngbPanelTitle>
+        <p class="font-weight-bold">Second</p>
+      </ng-template>
+      <ng-template ngbPanelContent>Second Panel</ng-template>
+    </ngb-panel>
+    <ngb-panel id="panel3">
+      <ng-template ngbPanelTitle>
+        <p class="font-weight-bold">Third</p>
+      </ng-template>
+      <ng-template ngbPanelContent>Third Panel</ng-template>
+    </ngb-panel>
+  </ngb-accordion>
 </div>
