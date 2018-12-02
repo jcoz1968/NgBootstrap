@@ -41,4 +41,8 @@ export class WorkoutsApiService {
     return this.http.get<any[]>(`${this.baseUrl}/locations`);
   }
 
+  searchLocations(searchTerm) {
+    return this.http.get<any[]>(`${this.baseUrl}/locations?q=${searchTerm}`);
+  }
+
 }
