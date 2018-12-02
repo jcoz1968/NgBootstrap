@@ -7,8 +7,8 @@
   "workouts": [
     {
       "id": 1,
-      "date": "2018-8-4",
-      "type": "bike",
+      "date": "2018-12-1",
+      "type": "row",
       "distance": "101"
     },
     {
