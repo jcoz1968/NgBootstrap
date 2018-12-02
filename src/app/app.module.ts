@@ -1,9 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-// Third party imports
-import { NgxLoadingModule } from 'ngx-loading';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -12,6 +8,10 @@ import { EntryEditorComponent } from './entry-editor/entry-editor.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+
+// Third party imports
+import { NgxLoadingModule } from 'ngx-loading';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { WorkoutsApiService } from './services/workouts-api.service';
 
@@ -28,6 +28,7 @@ import { WorkoutsApiService } from './services/workouts-api.service';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    NgbModule.forRoot(),
     NgxLoadingModule.forRoot({})
   ],
   providers: [ WorkoutsApiService ],
