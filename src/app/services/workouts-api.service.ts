@@ -22,7 +22,7 @@ export class WorkoutsApiService {
   }
 
   updateWorkout(workout: any) {
-    return this.http.post(`${this.baseUrl}/workouts/${workout.id}`, workout);
+    return this.http.put(`${this.baseUrl}/workouts/${workout.id}`, workout);
   }
 
   saveWorkout(workout: any) {

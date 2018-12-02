@@ -49,6 +49,12 @@
       "date": "2018-9-1",
       "distance": "2000",
       "id": 8
+    },
+    {
+      "type": "bike",
+      "date": "2018-12-1",
+      "distance": "122",
+      "id": 9
     }
   ],
   "locations": [
