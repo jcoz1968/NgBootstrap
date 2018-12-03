@@ -19,6 +19,23 @@
               <label ngbButtonLabel class="btn-primary"><input ngbButton type="radio" value="run">Run</label>
               <label ngbButtonLabel class="btn-primary"><input ngbButton type="radio" value="row">Row</label>
             </div>
+            <button class="btn btn-outline-info btn-sm ml-sm-2"
+                [popoverTitle]="popTitle"
+                [ngbPopover]="popContent"
+                popoverClass="custom-popover"
+                triggers="mouseenter:mouseleave"
+                #pop="ngbPopover"
+                (shown)="popVisibilityChange(pop)"
+                (hidden)="popVisibilityChange(pop)"
+                placement="right">
+                ?
+              </button>
+              <ng-template #popTitle>
+                <h4>Activity Type</h4>
+              </ng-template>
+              <ng-template #popContent>
+                  These buttons specify the type of <strong class="text-primary text-uppercase">activity</strong>
+                </ng-template>
           </div>
         </div>
 
@@ -65,14 +82,14 @@
           </div>
         </div>
 
-        <div *ngIf="wdistance.invalid && (wdistance.dirty || wdistance.touched)">
+        <div *ngIf="wdistance?.invalid && (wdistance?.dirty || wdistance?.touched)">
           <!-- <ngb-alert type="custom" [dismissible]="true" *ngIf="!isDismissible" (close)="isDismissible = !isDismissible">
                 Dismissable Alert.
               </ngb-alert> -->
-          <ngb-alert type="danger" *ngIf="wdistance.errors.required" [dismissible]="false">
+          <ngb-alert type="danger" *ngIf="wdistance?.errors.required" [dismissible]="false">
             <strong>Distance</strong> is required.
           </ngb-alert>
-          <ngb-alert type="warning" *ngIf="wdistance.errors.pattern">
+          <ngb-alert type="warning" *ngIf="wdistance?.errors.pattern">
             <strong>Distance</strong> must be a valid number.
           </ngb-alert>
         </div>
