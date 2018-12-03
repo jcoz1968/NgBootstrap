@@ -14,3 +14,15 @@
 .filled.bad {
   color: #ff1e1e;
 }
+
+.alert-custom {
+  background-color: purple;
+}
+
+.custom-popover {
+  background-color: #5bc0de;
+}
+
+.custom-popover .popover-header {
+  background-color: #5cb85c;
+}
